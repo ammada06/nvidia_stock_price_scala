@@ -33,7 +33,7 @@ object Incrementalload {
 //      dfFiltered.show(5)
 
       // Determine incremental data using left_anti join
-      val incremental_data_df = dfFiltered.join(existing_hive_data, Seq("date"), "left_anti")
+      val incremental_data_df = df.join(existing_hive_data, Seq("Date"), "left_anti")
       println("------------------Incremental data-----------------------")
       incremental_data_df.show(5)
 
