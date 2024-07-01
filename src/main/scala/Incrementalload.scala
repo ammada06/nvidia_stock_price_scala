@@ -5,7 +5,7 @@ object Incrementalload {
   def main(args: Array[String]): Unit = {
     // Initialize SparkSession
     val spark = SparkSession.builder()
-      .appName("IncrementalLoad")
+      .appName("Incrementalload")
       .config("spark.master", "local[*]")  // Adjust as per your deployment environment
       .enableHiveSupport()
       .getOrCreate()
