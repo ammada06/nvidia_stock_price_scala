@@ -54,7 +54,7 @@ object Incrementalload {
       val updated_hive_data = spark.read.table("ammad.nvidia_stock_price")
       // val df_ordered = updated_hive_data.orderBy(col("Date").desc_nulls_last)
       println("Updated Hive table:")
-      df_ordered.show(5)
+      updated_hive_data.show(5)
     } finally {
       // Stop SparkSession at the end
       spark.stop()
